@@ -1,0 +1,49 @@
+﻿@model Kindergarten.Models.UserLoginModel;
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>@ViewBag.Title</h1>
+    
+<style>
+.col-md-4{
+    background:#f0f0f0;
+}
+</style>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(x => x.ReturnUrl)
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <a href="/Login/ForgetPass">Forget My Password</a>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+            <a href="/Login/SignUp">تسجيل جديد</a> لايوجد لديك حساب ؟
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Guardian";
+}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buttons Page</title>
+<style>
+    body{
+        background-color: #f0f0f0;
+    }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+.button-wrapper {
+    display: flex;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 50px;
+    background-color: #3498db;
+    color: #fff;
+    border: 4px solid #1f3a93;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:#2980b9;
+}
+.Update{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color:aliceblue;
+    color:blue;
+    border: 4px solid #1f3a93;
+    cursor: pointer;
+    position:absolute;
+    top:80px;
+    left:30px;
+}
+.Update:hover{
+    background-color:white;
+}
+</style>
+</head>
+<body>
+<div class="button-container">
+    <div class="button-wrapper">
+        <button class="button" onclick="window.location.href='view'">View</button>
+        <button class="button" onclick="window.location.href='Add'">Add</button>
+        <button class="Update" onclick="window.location.href='Update'">Update</button>
+    </div>
+</div>
+</body>
